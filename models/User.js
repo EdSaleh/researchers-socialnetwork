@@ -91,4 +91,3 @@ var User = mongoose.model('User', userSchema);
 var Fileupload = mongoose.model('Files', fileuploadSchema);
 
 module.exports = User;
-module.exports = FileUpload;
