@@ -18,7 +18,14 @@ var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
 var multer = require('multer');
 
+var storage = multer.diskStorage({
+  destination: "uploads/",
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + ".pdf");
+  }
+})
 
+var upload = multer({ storage: storage })
 
 /**
  * Load environment variables from .env file, where API keys and passwords are configured.
@@ -99,7 +106,7 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
-app.use(multer({ dest: "./uploads/"}).any());
+app.use(multer({ storage: storage}).any());
 
 /**
  * Primary app routes.
