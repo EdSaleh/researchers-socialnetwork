@@ -3,7 +3,7 @@ extends layout
 block content
   .page-header
     h3 Upload File
-  form.form-horizontal(method='POST')
+  form.form-horizontal(method='POST', enctype="multipart/form-data")
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
       label.col-sm-3.control-label(for='fileName') File Name
@@ -12,7 +12,7 @@ block content
     .form-group
       label.col-sm-3.control-label(for='location') Location
       .col-sm-7
-        input.form-control(type='location', name='location', id='location', placeholder='Location', required)
+        input.form-control(type='file', name='location', id='location', accept=".pdf", placeholder='Location', required)
     .form-group
       .col-sm-offset-3.col-sm-7
         button.col-sm-3.btn.btn-primary(type='submit')

@@ -157,7 +157,7 @@ app.get('/api/linkedin', passportConfig.isAuthenticated, passportConfig.isAuthor
 app.get('/api/bitgo', apiController.getBitGo);
 app.post('/api/bitgo', apiController.postBitGo);
 app.get('/api/upload', apiController.getFileUpload);
-app.post('/api/upload', upload.single('location'), apiController.postFileUpload);
+app.post('/api/upload', upload, apiController.postFileUpload);
 app.get('/api/pinterest', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.getPinterest);
 app.post('/api/pinterest', passportConfig.isAuthenticated, passportConfig.isAuthorized, apiController.postPinterest);*/
 
