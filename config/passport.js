@@ -9,8 +9,9 @@ var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 var OpenIDStrategy = require('passport-openid').Strategy;
 var OAuthStrategy = require('passport-oauth').OAuthStrategy;
 var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
-
-var User = require('../models/User');
+var schemas = require('../models/User');
+var User = schemas.user;
+var File = schemas.file;
 
 passport.serializeUser(function(user, done) {
   done(null, user.id);

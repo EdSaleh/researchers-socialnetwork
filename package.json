@@ -18,6 +18,7 @@
     "connect-mongo": "^1.1.0",
     "dotenv": "^2.0.0",
     "errorhandler": "^1.4.3",
+    "expect.js": "~0.2.0",
     "express": "^4.13.4",
     "express-flash": "^0.0.2",
     "express-session": "^1.13.0",
@@ -43,11 +44,11 @@
     "passport-oauth": "^1.0.0",
     "passport-openid": "^0.4.0",
     "request": "^2.69.0",
+    "s3": "^4.4.0",
     "stylus": "~0.40.3",
-    "validator": "^5.1.0",
-    "yui": "^3.18.1",
     "superagent": "~0.15.7",
-    "expect.js": "~0.2.0"
+    "validator": "^5.1.0",
+    "yui": "^3.18.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
