@@ -97,9 +97,9 @@ exports.getFileUpload = function(req, res, next) {
 };
 
 exports.postFileUpload = function(req, res, next) {
-  db.saveFile(req.body.fileName, req.body.location);
-  db.findFile(req.body.fileName, req.body.location, function(result) {
-    s3.upload(JSON.stringify(result[0]._id), req.body.location, function(url) {
+  db.saveFile(req.body.fileName, JSON.stringify(req.files[0].path));
+  db.findFile(req.body.fileName, JSON.stringify(req.files[0].path), function(result) {
+    s3.upload(JSON.stringify(result[0]._id), "uploads/" + req.files[0].filename, function(url) {
       db.addFileUrl(result[0]._id, url);
       req.flash('success', { msg: 'File was uploaded successfully.' });
       res.render("uploaded", {

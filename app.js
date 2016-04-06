@@ -17,7 +17,6 @@ var passport = require('passport');
 var expressValidator = require('express-validator');
 var sass = require('node-sass-middleware');
 var multer = require('multer');
-var upload = multer({ dest: path.join(__dirname, 'uploads') });
 
 
 
@@ -100,6 +99,7 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+app.use(multer({ dest: "./uploads/"}).any());
 
 /**
  * Primary app routes.
