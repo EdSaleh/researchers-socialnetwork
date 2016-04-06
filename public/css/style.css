@@ -1,0 +1,349 @@
+/*Layout*/
+	.navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+
+
+
+
+
+
+
+	.blogShort{ border-bottom:1px solid #ddd;}
+	.add{background: #333; padding: 10%; height: 300px;}
+
+	.nav-sidebar { 
+		width: 100%;
+		padding: 8px 0; 
+		border-left: 1px solid #ddd;
+	}
+	.nav-sidebar a {
+		color: #333;
+		-webkit-transition: all 0.08s linear;
+		-moz-transition: all 0.08s linear;
+		-o-transition: all 0.08s linear;
+		transition: all 0.08s linear;
+	}
+	.nav-sidebar .active a { 
+		cursor: default;
+		border-left: 1px solid #34ca78;
+		color: #34ca78; 
+	}
+	.nav-sidebar .active a:hover {
+		background-color: #37D980;   
+	}
+	.nav-sidebar .text-overflow a,
+	.nav-sidebar .text-overflow .media-body {
+		white-space: nowrap;
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis; 
+	}
+
+	.btn-blog {
+		color: #ffffff;
+		background-color: #37d980;
+		border-color: #37d980;
+		border-radius:0;
+		margin-bottom:10px
+	}
+	.btn-blog:hover,
+	.btn-blog:focus,
+	.btn-blog:active,
+	.btn-blog.active,
+	.open .dropdown-toggle.btn-blog {
+		color: white;
+		background-color:#34ca78;
+		border-color: #34ca78;
+	}
+	 h2{color:#34ca78;}
+	 .margin10{margin-bottom:10px; margin-right:10px;}
+	 
+	/*Community*/
+	.media
+		{
+			/* box-shadow:0px 0px 4px -2px #000; */
+			margin: 20px 0;
+			/* padding:30px; */
+		}
+		.dp
+		{
+			border:10px solid #eee;
+			transition: all 0.2s ease-in-out;
+		}
+		img#profile-img {
+			width: 125px;
+			height: 125px;
+		}
+		/*.dp:hover
+		{
+			border:2px solid #eee;
+			transform:rotate(360deg);
+			-ms-transform:rotate(360deg);  
+			-webkit-transform:rotate(360deg);  
+		}*/
+		
+		/*Facebook Post*/
+		/*-- Global Selectors --*/
+a{
+    color:#47649F;
+}
+
+body{
+    font-family:'helvetica';    
+}
+
+/*-- Bootstrap Override Style --*/
+
+
+/*-- Content Style --*/
+.post-footer-option li{
+    float:left;
+    margin-right:50px;
+    padding-bottom:15px;
+}
+
+.post-footer-option li a{
+    color:#AFB4BD;
+    font-weight:500;
+    font-size:1.3rem;
+}
+
+.photo-profile{
+    border:1px solid #DDD;    
+}
+
+.anchor-username h4{
+    font-weight:bold;    
+}
+
+.anchor-time{
+    color:#ADB2BB;
+    font-size:1.2rem;
+}
+
+.post-footer-comment-wrapper{
+    background-color:#F6F7F8;
+}
+
+		/*About*/
+	.user-row {
+		margin-bottom: 14px;
+	}
+
+	.user-row:last-child {
+		margin-bottom: 0;
+	}
+
+	.dropdown-user {
+		margin: 13px 0;
+		padding: 5px;
+		height: 100%;
+	}
+
+	.dropdown-user:hover {
+		cursor: pointer;
+	}
+
+	.table-user-information > tbody > tr {
+		border-top: 1px solid rgb(221, 221, 221);
+	}
+
+	.table-user-information > tbody > tr:first-child {
+		border-top: 0;
+	}
+
+
+	.table-user-information > tbody > tr > td {
+		border-top: 0;
+	}
+	.toppad
+	{margin-top:20px;
+	}
+
+	/*Post*/
+	 .main
+	{
+		background:#f6f6f6;
+	}
+	body
+	{
+		   background:#f6f6f6;
+		   margin:30px;
+	}
+	.ubuntu
+	{
+		font-family: 'Ubuntu', sans-serif;
+	}
+	p
+	{
+		font-family: 'Ubuntu', sans-serif;
+		text-align:justify;
+	}
+	.pacifico
+	{
+		font-family: 'Pacifico', sans-serif;
+		font-size: 2.4em;
+	}
+	.twitter-follow
+	{
+
+		font-family: 'Ubuntu', sans-serif;
+		font-size:1.4em;
+		transition:all 0.2s ease-in;
+		/*                width:40px;*/
+		overflow:hidden;
+
+		white-space: nowrap;
+
+	}
+
+	.twitter-follow:hover
+	{
+		/*                color:#333;
+						width:auto;
+		
+						border-radius:1px;
+		
+						background:#fff !important;
+						border-bottom: 3px solid orangered;*/
+
+	}
+
+	.header
+	{
+		padding:10px;
+	}
+	.post h2 {
+		font-size: 30px;
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	.post h2 a
+	{
+		color: #333;
+		text-decoration: none;
+		display: block;
+	}
+	h2
+	{
+		font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif, "Helvetica Neue", HelveticaNeue, Arial, sans-serif;
+	}
+
+	.post
+	{
+		
+		border-radius: 4px;
+		overflow: hidden;
+		padding: 0;
+		position: relative;
+		-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+		-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+		background-clip: padding-box;
+		background:#fff;
+	}
+
+
+	
+	/*Sign in*/
+	#login{
+		width:400px;
+		padding:30px;
+	}
+	/*Sign up*/
+	/*#wrap{
+background-image: -ms-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+
+background-image: -moz-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+
+background-image: -o-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D3D8E8));
+
+background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+
+background-image: linear-gradient(to bottom, #FFFFFF 0%, #D3D8E8 100%);
+background-repeat: no-repeat;
+background-attachment: fixed;*/
+}
+legend{
+	color:#141823;
+	font-size:25px;
+	font-weight:bold;
+}
+.signup-btn {
+  background: #79bc64;
+  background-image: -webkit-linear-gradient(top, #79bc64, #578843);
+  background-image: -moz-linear-gradient(top, #79bc64, #578843);
+  background-image: -ms-linear-gradient(top, #79bc64, #578843);
+  background-image: -o-linear-gradient(top, #79bc64, #578843);
+  background-image: linear-gradient(to bottom, #79bc64, #578843);
+  -webkit-border-radius: 4;
+  -moz-border-radius: 4;
+  border-radius: 4px;
+  text-shadow: 0px 1px 0px #898a88;
+  -webkit-box-shadow: 0px 0px 0px #a4e388;
+  -moz-box-shadow: 0px 0px 0px #a4e388;
+  box-shadow: 0px 0px 0px #a4e388;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #3b6e22  1px;
+  text-decoration: none;
+}
+
+.signup-btn:hover {
+  background: #79bc64;
+  background-image: -webkit-linear-gradient(top, #79bc64, #5e7056);
+  background-image: -moz-linear-gradient(top, #79bc64, #5e7056);
+  background-image: -ms-linear-gradient(top, #79bc64, #5e7056);
+  background-image: -o-linear-gradient(top, #79bc64, #5e7056);
+  background-image: linear-gradient(to bottom, #79bc64, #5e7056);
+  text-decoration: none;
+}
+.navbar-default .navbar-brand{
+		color:#fff;
+		font-size:30px;
+		font-weight:bold;
+	}
+.form .form-control { margin-bottom: 10px; }
+@media (min-width:768px) {
+	#home{
+		margin-top:50px;
+	}
+	#home .slogan{
+		color: #0e385f;
+		line-height: 29px;
+		font-weight:bold;
+	}
+}
