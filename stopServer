@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Invoke forever module to stop our node server
+
+sudo forever stop app.js
