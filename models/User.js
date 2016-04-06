@@ -27,19 +27,13 @@ var userSchema = new mongoose.Schema({
 }, { timestamps: true });
 
 var fileuploadSchema = new mongoose.Schema({
-  filename: { 
-	type: String
-  },
-  path: String,
-  filesize: Number,
+  filename: String,
+  s3key: String,
+  url: String,
+  location: String,
   uploaded_by: String,
-  likes: Number,
-  comments: {
-     id: { type: Number, unique: true },
-     content: String,
-     created_at: { type: Date, default: Date.now }
-  }
-	
+  likes: Number
+
 }, { timestamps: true });
 
 /**
@@ -90,4 +84,6 @@ userSchema.methods.gravatar = function(size) {
 var User = mongoose.model('User', userSchema);
 var Fileupload = mongoose.model('Files', fileuploadSchema);
 
-module.exports = User;
+var exports = {user: User, file: Fileupload};
+
+module.exports = exports;

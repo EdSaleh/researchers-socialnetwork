@@ -1,9 +1,11 @@
 var _ = require('lodash');
 var async = require('async');
+var s3 = require('./../config/s3');
+var db = require('./../config/db');
 
 /**
- * Split into declaration and initialization for better startup performance.
- */
+* Split into declaration and initialization for better startup performance.
+*/
 var validator;
 var cheerio;
 var graph;
@@ -12,9 +14,9 @@ var Linkedin;
 var request;
 
 /**
- * GET /api/facebook
- * Facebook API example.
- */
+* GET /api/facebook
+* Facebook API example.
+*/
 exports.getFacebook = function(req, res, next) {
   graph = require('fbgraph');
 
@@ -46,9 +48,9 @@ exports.getFacebook = function(req, res, next) {
 
 
 /**
- * GET /api/github
- * GitHub API Example.
- */
+* GET /api/github
+* GitHub API Example.
+*/
 exports.getGithub = function(req, res, next) {
   Github = require('github-api');
 
@@ -69,9 +71,9 @@ exports.getGithub = function(req, res, next) {
 
 
 /**
- * GET /api/linkedin
- * LinkedIn API example.
- */
+* GET /api/linkedin
+* LinkedIn API example.
+*/
 exports.getLinkedin = function(req, res, next) {
   Linkedin = require('node-linkedin')(process.env.LINKEDIN_ID, process.env.LINKEDIN_SECRET, process.env.LINKEDIN_CALLBACK_URL);
 
@@ -91,14 +93,18 @@ exports.getLinkedin = function(req, res, next) {
 
 
 exports.getFileUpload = function(req, res, next) {
-  res.render('/api/upload', {
-    title: 'File Upload'
-  });
+  res.render('upload', {});
 };
 
 exports.postFileUpload = function(req, res, next) {
-  req.flash('success', { msg: 'File was uploaded successfully.'});
-  res.redirect('/api/upload');
+  db.saveFile(req.body.fileName, req.body.location);
+  db.findFile(req.body.fileName, req.body.location, function(result) {
+    s3.upload(JSON.stringify(result[0]._id), req.body.location, function(url) {
+      db.addFileUrl(result[0]._id, url);
+      req.flash('success', { msg: 'File was uploaded successfully.' });
+      res.render("uploaded", {
+        file: url
+      });
+    });
+  });
 };
-
-
