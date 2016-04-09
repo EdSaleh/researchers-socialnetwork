@@ -97,6 +97,7 @@ exports.getFileUpload = function(req, res, next) {
 };
 
 exports.postFileUpload = function(req, res, next) {
+  //req.files[0].filename += ".pdf";
   db.saveFile(req.body.fileName, JSON.stringify(req.files[0].path));
   db.findFile(req.body.fileName, JSON.stringify(req.files[0].path), function(result) {
     s3.upload(JSON.stringify(result[0]._id), "uploads/" + req.files[0].filename, function(url) {
