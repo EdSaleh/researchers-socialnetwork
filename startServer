@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Invoke the forever module to start our node server.
+
+sudo forever \
+	start \
+	-al forever.log \
+	-ao out.log \
+	-ae err.log \
+	app.js
