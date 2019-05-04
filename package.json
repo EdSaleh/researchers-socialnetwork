@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "netres",
   "version": "10.3.1",
   "description": "reasercher social media project",
@@ -120,6 +119,5 @@
     "mocha": "^2.4.5",
     "supertest": "^1.2.0"
   },
->>>>>>> refs/remotes/origin/parth
   "license": "MIT"
 }
